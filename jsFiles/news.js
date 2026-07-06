@@ -1,7 +1,7 @@
 const API_KEy = "6853a4c4a5c1518b55a4600dd0c750a6";
 
 async function getNews(category) {
-    const newsUrl = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=in&apikey=${API_KEy}`;
+   const newsUrl=`http://localhost:3000/news?category=${category}`;
 
     try {
 
@@ -96,7 +96,7 @@ if (topicSelect) {
         const searchTerm = `${query} ${category}`;
         try {
 
-            const res = await fetch(`https://gnews.io/api/v4/search?q=${encodeURIComponent(searchTerm)}&lang=en&apikey=${API_KEy}`);
+            const res = await fetch(`http://localhost:3000/search?q=${searchTerm}`);
 
             const data = await res.json();
 
