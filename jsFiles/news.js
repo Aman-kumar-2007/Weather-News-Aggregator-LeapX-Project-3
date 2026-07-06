@@ -1,7 +1,7 @@
 const API_KEy = "6853a4c4a5c1518b55a4600dd0c750a6";
 
 async function getNews(category) {
-   const newsUrl=`http://localhost:3000/news?category=${category}`;
+   const newsUrl=`https://weather-news-aggregator-leapx-project-3.onrender.com/news?category=${category}`;
 
     try {
 
@@ -96,7 +96,7 @@ if (topicSelect) {
         const searchTerm = `${query} ${category}`;
         try {
 
-            const res = await fetch(`http://localhost:3000/search?q=${searchTerm}`);
+            const res = await fetch(`https://weather-news-aggregator-leapx-project-3.onrender.com/search?q=${searchTerm}`);
 
             const data = await res.json();
 
