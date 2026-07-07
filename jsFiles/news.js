@@ -159,7 +159,7 @@ if (topicSelect) {
                 const index = Number(btn.dataset.index);
                 localStorage.setItem("selectedArticle", JSON.stringify(articles[index]));
                 localStorage.setItem("allArticles", JSON.stringify(articles));
-                window.location.href = "news-detail.html";
+                window.location.href = "./htmlFiles/news-detail.html";
             });
         })
 
@@ -365,7 +365,7 @@ const backBtn = document.getElementById("back-btn");
 
 if (backBtn) {
     backBtn.addEventListener("click", () => {
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
     });
 }
 
